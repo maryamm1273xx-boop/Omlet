@@ -1,0 +1,242 @@
+/* 
+این یک کامنت در CSS هست. کامنت‌ها در مرورگر نمایش داده نمی‌شن
+و فقط برای توضیح کدها استفاده میشن
+*/
+
+/* 
+ایمپورت فونت از گوگل فونت
+ما از دو فونت متفاوت استفاده کردیم
+*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Vazirmatn:wght@100..900&display=swap');
+
+/*
+اینجا ستایل کلی برای همه عناصر صفحه اعمال میشه
+* یعنی همه عناصر
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* اندازه عناصر شامل padding و border میشه */
+  margin: 0; /* حذف margin پیش فرض */
+  padding: 0; /* حذف padding پیش فرض */
+}
+
+/* 
+ستایل برای بدنه اصلی صفحه
+body تگ اصلی محتوای صفحه هست
+*/
+body {
+  min-height: 100vh; /* حداقل ارتفاع برابر با ارتفاع صفحه */
+  background-color: var(--color-background); /* رنگ پس زمینه */
+  font-family: var(--font-f-body); /* فونت متن‌ها */
+  text-align: right; /* متن‌ها راست‌چین */
+}
+
+/* 
+تعریف متغیرهای CSS
+این متغیرها رو می‌تونیم در کل فایل استفاده کنیم
+*/
+:root {
+  /* تعریف رنگ‌ها */
+  --color-White: hsl(0, 0%, 100%); /* سفید */
+  --color-background: hsl(30, 54%, 90%); /* رنگ پس زمینه */
+  --color-stone-150: hsl(30, 18%, 87%); /* رنگ خاکستری روشن */
+  --color-gray: hsl(30, 10%, 34%); /* خاکستری */
+  --color-Stone-900: hsl(24, 5%, 18%); /* خاکستری تیره */
+  --color-Brown: hsl(14, 45%, 36%); /* قهوه‌ای */
+  --color-Rose-800: hsl(332, 51%, 32%); /* صورتی تیره */
+  --color-Rose-50: hsl(330, 100%, 98%); /* صورتی روشن */
+
+  /* تعریف فونت‌ها */
+  --font-f-header: "Vazirmatn", sans-serif; /* فونت برای عناوین */
+  --font-f-body: "Vazirmatn", sans-serif; /* فونت برای متن‌ها */
+
+  /* تعریف وزن فونت‌ها */
+  --font-w-body1: 400; /* وزن معمولی */
+  --font-w-body2: 600; /* وزن نیمه ضخیم */
+  --font-w-body3: 700; /* وزن ضخیم */
+}
+
+/* 
+ستایل برای تگ h1
+h1 مهمترین عنوان صفحه هست
+*/
+h1 {
+  color: var(--color-Stone-900); /* رنگ عنوان */
+  font-family: var(--font-f-header); /* فونت عنوان */
+  margin-bottom: 1rem; /* فاصله از پایین */
+}
+
+/* 
+ستایل برای تگ h2
+h2 برای زیرعنوان‌ها استفاده میشه
+*/
+h2 {
+  color: var(--color-Brown); /* رنگ زیرعنوان */
+  font-family: var(--font-f-header); /* فونت زیرعنوان */
+  margin-bottom: 1rem; /* فاصله از پایین */
+}
+
+/* 
+ستایل برای تگ h3
+h3 برای عنوان‌های سطح سوم استفاده میشه
+*/
+h3 {
+  color: var(--color-Rose-800); /* رنگ عنوان سطح سوم */
+  margin-bottom: 0.5rem; /* فاصله از پایین */
+}
+
+/* 
+ستایل برای پاراگراف، لیست و سلول‌های جدول
+*/
+p, li, td {
+  font-family: var(--font-f-body); /* فونت متن */
+  color: var(--color-gray); /* رنگ متن */
+  line-height: 1.6; /* فاصله بین خطوط */
+  font-size: 0.9rem; /* اندازه فونت */
+}
+
+/* 
+ستایل برای span داخل لیست‌ها
+span برای بخشی از متن که می‌خوایم متفاوت باشه
+*/
+li span {
+  font-weight: var(--font-w-body2); /* وزن فونت نیمه ضخیم */
+  color: var(--color-Stone-900); /* رنگ متن */
+}
+
+/* 
+ستایل برای آیتم‌های لیست
+*/
+ul li, ol li {
+  padding: 0.3rem 0; /* فاصله داخلی بالا و پایین */
+  margin-right: 1rem; /* فاصله از راست */
+}
+
+/* 
+کلاس container برای بخش اصلی محتوا
+*/
+.container {
+  width: 60%; /* عرض ۶۰ درصد صفحه */
+  margin: 4rem auto; /* فاصله بالا و پایین و وسط‌چین */
+  background-color: var(--color-White); /* رنگ پس زمینه سفید */
+  border-radius: 1rem; /* گوشه‌های گرد */
+  overflow: hidden; /* محتوای بیرون زده نمایش داده نشه */
+}
+
+/* 
+کلاس header برای بخش بالایی
+*/
+.header {
+  padding: 1.5rem 1.5rem 0 1.5rem; /* فاصله داخلی */
+}
+
+/* 
+ستایل برای عکس header
+*/
+.header-img {
+  width: 100%; /* عرض کامل */
+  border-radius: 0.5rem; /* گوشه‌های گرد */
+  display: block; /* نمایش به صورت بلوک */
+}
+
+/* 
+کلاس body برای بخش اصلی محتوا
+*/
+.body {
+  padding: 0 1.5rem 1.5rem 1.5rem; /* فاصله داخلی */
+}
+
+/* 
+کلاس preparation برای بخش زمان آماده‌سازی
+*/
+.preparation {
+  background-color: var(--color-Rose-50); /* رنگ پس زمینه صورتی روشن */
+  border-radius: 0.5rem; /* گوشه‌های گرد */
+  padding: 1rem; /* فاصله داخلی */
+  margin: 1.5rem 0; /* فاصله از بالا و پایین */
+}
+
+/* 
+ستایل برای خطوط جدا کننده
+*/
+hr {
+  border: none; /* حذف border پیش فرض */
+  height: 1px; /* ارتفاع ۱ پیکسل */
+  background-color: var(--color-stone-150); /* رنگ خط */
+  margin: 1.5rem 0; /* فاصله از بالا و پایین */
+}
+
+/* 
+ستایل برای جدول ارزش غذایی
+*/
+.nutrition table {
+  width: 100%; /* عرض کامل */
+  border-collapse: collapse; /* حذف فاصله بین borderها */
+  margin-top: 1rem; /* فاصله از بالا */
+}
+
+/* 
+ستایل برای هر ردیف جدول
+*/
+.nutrition tr {
+  border-bottom: 1px solid var(--color-stone-150); /* خط پایین */
+}
+
+/* 
+ستایل برای آخرین ردیف جدول
+*/
+.nutrition tr:last-child {
+  border-bottom: none; /* حذف خط پایین برای آخرین ردیف */
+}
+
+/* 
+ستایل برای سلول‌های جدول
+*/
+.nutrition th, .nutrition td {
+  text-align: right; /* متن راست‌چین */
+  padding: 0.5rem 1rem; /* فاصله داخلی */
+}
+
+/* 
+ستایل برای سلول‌های مهم جدول (th)
+*/
+.nutrition th {
+  color: var(--color-Brown); /* رنگ قهوه‌ای */
+  font-weight: var(--font-w-body2); /* وزن فونت نیمه ضخیم */
+}
+
+/* 
+دستورات رسپانسیو برای صفحه‌های کوچک (موبایل)
+این دستورات وقتی صفحه کمتر از ۶۰۰ پیکسل عرض داشته باشه اجرا میشن
+*/
+@media (max-width: 600px) {
+  .container {
+    width: 90%; /* عرض ۹۰ درصد صفحه */
+    margin: 2rem auto; /* فاصله کمتر */
+    border-radius: 0; /* حذف گوشه‌های گرد */
+  }
+}
+
+/* 
+دستورات رسپانسیو برای صفحه‌های خیلی کوچک
+این دستورات وقتی صفحه کمتر از ۳۷۵ پیکسل عرض داشته باشه اجرا میشن
+*/
+@media (max-width: 375px) {
+  .container {
+    width: 100%; /* عرض کامل صفحه */
+    margin: 0; /* حذف فاصله */
+  }
+
+  .header {
+    padding: 0; /* حذف فاصله داخلی */
+  }
+
+  .header-img {
+    border-radius: 0; /* حذف گوشه‌های گرد عکس */
+  }
+  
+  .body {
+    padding: 1rem; /* فاصله داخلی کمتر */
+  }
+}
